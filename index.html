@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMBOT - AI-Powered Discord Bot & JAM Token</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .navbar {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(96, 165, 250, 0.1), transparent);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3));
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #60a5fa, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            background: #60a5fa;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #60a5fa;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: #3b82f6;
+        }
+
+        .cta-button.secondary:hover {
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        .features {
+            padding: 4rem 2rem;
+            background: #1e293b;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: #0f172a;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #60a5fa;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="/api/placeholder/50/50" alt="JAMBOT Logo"> <!-- Replace with actual logo path -->
+                JAMBOT
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="https://pump.fun" target="_blank">Buy JAM</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="/api/placeholder/200/200" alt="JAMBOT Logo" class="hero-logo"> <!-- Replace with actual logo path -->
+            <h1>The Future of AI Utility in Web3</h1>
+            <p>JAMBOT is an innovative AI-powered Discord bot backed by JAM Token on the Solana blockchain. Revolutionize your community with advanced automation, secure verification, and intelligent features for the Web3 ecosystem.</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button">Add to Discord</a>
+                <a href="https://pump.fun" target="_blank" class="cta-button secondary">Buy JAM Token</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>AI Bot Enhancements</h3>
+                <p>Advanced AI capabilities including real-time wallet verification and automated NFT-based role management.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Premium Features</h3>
+                <p>Stake or hold JAM Tokens to unlock exclusive AI functionalities and customizable bot behaviors.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Ecosystem Rewards</h3>
+                <p>Earn JAM Tokens through active participation, fostering community growth and collaboration.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Developer Platform</h3>
+                <p>Join our ecosystem of developers building the future of AI-powered Discord automation.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
